@@ -1,0 +1,5 @@
+<header id="header" class="">
+<h1>Hello <%= @user.name%></h1>
+<h3>actions: <%= link_to("view your products", user_products_path(@user.id)) %> - <%= link_to("Back", users_path) %></h3>
+</header><!-- /header -->
+

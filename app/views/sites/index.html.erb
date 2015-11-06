@@ -1,0 +1,10 @@
+<h1>My Auction Site</h1>
+
+<h3>The actual auctions:</h3>
+
+<ul>
+	<%@products.each do |product|%>
+	<li><%= "For #{product.title} the bid is actually #{product.bid}€" %>
+	<button><%= link_to "See the product", details_path(product) %></button></li>
+	<%end%>
+</ul>

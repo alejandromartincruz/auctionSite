@@ -1,0 +1,7 @@
+<h1>Edit your product</h1>
+
+<%= flash_message %>
+
+<%= render "form", user: @user, product: @product %>
+
+<%= link_to "Back to products", user_products_path(@user) %>

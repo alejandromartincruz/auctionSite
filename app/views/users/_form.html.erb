@@ -1,0 +1,14 @@
+<% button_name = user.persisted? ? "Edit user" : "New user" %>
+
+<%= form_for user do |f| %>
+	<div>
+		<%= f.text_field :name, placeholder:"write the username" %>
+	</div><br>
+	<div>
+		<%= f.email_field :mail, placeholder:"Write your email: example@email.com" %>
+	</div><br>
+	<div>
+		<%= f.submit button_name %>
+		<button><a href="http://localhost:3000/users">Back to users list</a></button>
+	</div>
+<%end%>

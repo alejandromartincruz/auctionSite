@@ -1,0 +1,15 @@
+<% button_name = product.persisted? ? "Edit product" : "New product" %>
+
+<%= form_for [user, product] do |f| %>
+	<div>
+		<%= f.text_field :title, placeholder:"what do you want to sell?" %>
+	</div><br>
+	<div>
+		<%= f.text_field :description, placeholder:"Describe here your item" %>
+	</div><br>
+	<div>
+		<%= f.submit button_name %>
+		
+	</div>
+<%end%>
+<br>

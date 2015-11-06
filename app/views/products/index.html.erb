@@ -1,0 +1,14 @@
+<h1>This are the products of <%= @user.name %></h1>
+<button><%= link_to("New product", new_user_product_path(@user)) %></button> - <button><%= link_to("Go back", user_path(@user)) %></button>
+
+<%= flash_message %>
+
+<ul>
+<% @products.each do |product| %>
+
+	<li><%=link_to( "#{product.title} - #{product.description}" , "#")%> 
+	<button><%= link_to("Edit", edit_user_product_path(@user, product)) %></button> 
+	<button><%= link_to("Delete Product", user_product_path(@user, product), method: :delete, data: {confirm: "Are you sure?"}) %></button></li>
+<% end %>
+</ul>
+<hr>

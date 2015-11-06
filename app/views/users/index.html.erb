@@ -1,12 +1,12 @@
 <h1>Choose your User</h1>
 <h2>Only logged users can bid products</h2>
-<button><%= link_to("new user", new_user_path) %></button>
 
 <%= flash_message %>
+<hr>
 
 <ul>
 <% @users.each do |user| %>
-	<li><%=link_to( "#{user.name} - #{user.mail}" , user_path(user))%> <button><%= link_to("Edit", edit_user_path(user)) %></button> <button><%= link_to("Delete user", user_path(user), method: :delete, data: {confirm: "Are you sure?"}) %></button></li>
+	<li><div class="btn-group"><button type="button" class="btn btn-default"><%= link_to("Edit User", edit_user_path(user)) %></button> <button type="button" class="btn btn-default"><%= link_to("Delete user", user_path(user), method: :delete, data: {confirm: "Are you sure?"}) %></button></div> <%=link_to( "#{user.name} - #{user.mail}" , user_path(user))%></li><br>
 <% end %>
 </ul>
 <hr>

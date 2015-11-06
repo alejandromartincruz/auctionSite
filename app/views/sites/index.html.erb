@@ -1,10 +1,11 @@
 <h1>My Auction Site</h1>
 
 <h3>The actual auctions:</h3>
-
+<hr>
 <ul>
 	<%@products.each do |product|%>
-	<li><%= "For #{product.title} the bid is actually #{product.bid}€" %>
-	<button><%= link_to "See the product", details_path(product) %></button></li>
+	<li><button type="button" class="btn btn-default"> <%= link_to "See the product", details_path(product) %></button>
+	<%= "For #{product.title} the bid is actually #{product.bid}€" %>
+	</li><br>
 	<%end%>
 </ul>

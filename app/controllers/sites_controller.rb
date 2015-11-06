@@ -6,5 +6,6 @@ class SitesController < ApplicationController
 
 	def show
 		@product = Product.find_by(id: params[:id])
+		@user = User.find_by(id: @product.user_id)
 	end
 end

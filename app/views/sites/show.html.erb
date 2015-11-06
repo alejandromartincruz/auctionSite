@@ -1,9 +1,10 @@
-<%= @product.title %>
+<h3><%= @product.title %></h3><br>
+<strong>Owner:</strong> <%= @user.name %>
 <p>
 	<strong>Description:</strong><br>
 	<%= @product.description %>
 </p>
-<%= @product.bid %>
+<%= @product.bid %>,00€
 <br>
 <button><%= link_to "Go back", "/" %></button> 
 <button><%= link_to "Bid", users_path %></button>
